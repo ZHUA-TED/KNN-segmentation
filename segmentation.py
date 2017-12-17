@@ -11,7 +11,7 @@ column = len(datalab[1,])
 rows = len(datalab)
 ab = datalab[:,:,2:3]
 ab = reshape(ab,rows*column,2)
-ans ,arr = kmeans2(ab,center,iter=15,missing='warn')
+ans ,arr = kmeans2(ab.astype(float),center,iter=15,missing='warn')
 cluster = []
 a = []
 for i in range(center):
